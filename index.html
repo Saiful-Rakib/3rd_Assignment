@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List App</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(135deg, #7d94fa, #a74fff);
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+        }
+        .Inputs-IN{
+            width: 45rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4rem;
+        }
+        h2{
+            font-size: 5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #000000;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        input{
+            width: 70%;
+            height: 3rem;
+            background-color: #f0efef;
+            border: 1px solid #000000;
+            border-radius: 0.8rem;
+            color: #000000;
+            
+        }
+        table {
+            width: 85%;
+            font-size: 1.2rem;
+            border-collapse: collapse;
+            margin-top: 20px;
+            justify-self: center; 
+        }
+        th,td{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        button {
+            width: 120px;
+            padding: .8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000000;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+  </style>
+</head>
+<body>
+    <div class="Inputs-IN">
+        <h2>Book List</h2>
+
+        <div class="inputs">
+            <input type="text" id="bookName" placeholder="Book Name">
+            <input type="text" id="authorName" placeholder="Author Name">
+            <button id="addBook">Add Book</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="bookList">
+        <!-- Dynamic rows will be added here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
